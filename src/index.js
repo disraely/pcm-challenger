@@ -37,4 +37,4 @@ app.get('*', (req,res) =>{
 	res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
 });
 
-app.listen(4000, () => console.log('Server on port 4000'));
+app.listen(process.env.PORT || 4000)
