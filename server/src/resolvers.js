@@ -31,17 +31,17 @@ export const resolvers = {
     agregarPlato: (root, args) => {
       const nuevoPlato = { PlaIde: platos.length, PlaNom: args.PlaNom, PlaDes: args.PlaDes, PlaFec: args.PlaFec, PlaCat: args.PlaCat };
 
-      if (filter(platos, { PlaFec: args.PlaFec, PlaCat: "E" }).length > 2) {
-        throw new Error('Ya se registraron las Entradas máximas (2) del día.');
+      /*if (filter(platos, { PlaFec: args.PlaFec, PlaCat: "E" }).length > 1) {
+        throw new Error('MAXENTRADAS');
       }
 
-      if (filter(platos, { PlaFec: args.PlaFec, PlaCat: "P" }).length > 2) {
-        throw new Error('Ya se registraron los platos de fondos máximos (2) del día.');
+      if (filter(platos, { PlaFec: args.PlaFec, PlaCat: "P" }).length > 1) {
+        throw new Error('MAXPFONDO');
       }
 
-      if (filter(platos, { PlaFec: args.PlaFec, PlaCat: "R" }).length > 1) {
-        throw new Error('Ya se registro el Refresco del día.');
-      }
+      if (filter(platos, { PlaFec: args.PlaFec, PlaCat: "R" }).length > 0) {
+        throw new Error('MAXREFRESCO');
+      }*/
 
       platos.push(nuevoPlato);
       return nuevoPlato;
