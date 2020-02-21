@@ -1,0 +1,78 @@
+{
+  plato(PlaIde: 1) {
+    PlaNom
+    PlaDes
+    PlaFec
+    PlaCat
+  }
+}
+
+mutation {
+  agregarPlato(PlaNom: "asas", PlaDes: "sdasd", PlaFec: "2020-01-14T08:00:00.000Z", PlaCat: "E") {
+    PlaIde
+    PlaNom
+    PlaDes
+    PlaFec
+    PlaCat
+  }
+}
+
+mutation addPlato($PlaNom: String!, $PlaDes: String, $PlaFec: DateTime!, $PlaCat: String!) {
+  agregarPlato(PlaNom: $PlaNom, PlaDes: $PlaDes, PlaFec: $PlaFec, PlaCat: $PlaCat){
+    PlaIde
+  }
+}
+
+mutation {
+	agregarPedido(PedEnt: 1, PedFon: 1, PedRef: 1, PedFec: "2020-01-14T08:00:00.000Z", PedEst: "N"){
+    PedIde
+    PedPlaEnt {
+      PlaNom
+      PlaDes
+      PlaFec
+      PlaCat
+    }
+    PedPlaFon{
+      PlaNom
+      PlaDes
+      PlaFec
+      PlaCat
+    }
+    PedPlaRef{
+      PlaNom
+      PlaDes
+      PlaFec
+      PlaCat
+    }
+    PedFec
+    PedEst
+  }
+}
+
+mutation {
+	actualizarPlato(PlaIde: 1, input: {PlaNom: "ass", PlaDes: "", PlaFec: "2020-01-14T08:00:00.000Z", PlaCat: "E"}){
+    PlaIde
+  }
+}
+
+mutation {
+	actualizarPedido(PedIde: 5, input: {PedEnt:1, PedFon:2, PedRef:3, PedFec: "2020-01-14T08:00:00.000Z", PedEst: "N"}) {
+	  PedEnt
+	  PedFon
+	  PedRef
+	  PedFec
+	  PedEst
+	}  
+}
+
+mutation ActualizarPedido($PedIde: ID!, $input: PedidoEntrada) {
+  actualizarPedido(PedIde: $PedIde, input: $input) {
+		PedIde
+  }
+}
+
+query PlatosPorCategoria($PlaFec: DateTime!, $PlaCat: String!){
+    platosPorCategoria(PlaFec: $PlaFec, PlaCat: $PlaCat){
+      PlaNom
+    }
+  }

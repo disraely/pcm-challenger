@@ -1,0 +1,74 @@
+Buenas tardes estimados,
+
+Nos gustaría soltarles un reto técnico, con miras a evaluar de primera mano tu desempeño.
+
+Para continuar con la evaluación nos gustaría desarrolles el siguiente reto.
+
+"Desarrollar una aplicación web para la atención de menú de almuerzo"
+La app busca mejorarle la vida al mozo y al cocinero de un restaurante típico de menús fijos, como los que solemos buscar a la hora del almuerzo.
+
+Recomendaciones:
+Trata de hacer una aplicación mínima pero intuitiva, pensando más en el Mozo y Cocinero como usuarios. 
+Pónte en el lugar de ellos y trata de entregarles una aplicación que les ayude a cumplir con sus misiones.
+Desplegar en algún proveedor gratuito, ejemplo: https://heroku.com 
+Poner el código fuente en github.com y agregar como desarrollador a lab51.epic@gmail.com o ponerlo de modo libre para la revisión
+Utilizar cualquier base de datos y cualquier lenguaje de programación, aunque de preferencia Ruby on Rails
+No es necesario registro de usuarios
+No es necesario cobros en línea ni facturación ni reportes. 
+Los casos de uso son uno para el Mozo y otro para el Cocinero
+Entregables:
+Código fuente en Github
+Aplicación web funcionando (url) de preferencia en Heroku o similar
+Ejemplo de casos de uso:
+Como Cocinero, debo definir dos entradas, dos platos de fondo y un refresco y ofrecerlos para que los comensales elijan uno de cada uno
+El mozo registra el pedido del comensal y debe llegar al Cocinero como Nuevo Pedido
+El cocinero revisa sus Nuevos Pedidos.
+Una vez que el cocinero termina, marca el pedido como "para servir" y el mozo debe recogerlo y servirlo
+Una vez servido, el mozo marca como "entregado
+Tiempo máximo: Hasta el 21 de Febrero
+
+Cualquier pregunta o mejora es bienvenida 
+
+Saludos!
+
+Cocinero: 
+========
+  Platos
+    PlaIde  Int
+    PlaNom  String
+    PlaDes  String
+    PlaFec  Date
+    PlaCat(E:Entrada, P:Plato de fondo, R:Refresco) String
+  Modificar Pedidos
+    
+Mozo:
+=====
+  Registrar Pedidos
+    PedIde  int 
+    PedEnt  PlaIde
+    PedFon  PlaIde
+    PedRef  PlaIde
+    PedFec  Date
+    PedHor  Time
+    PedEst(N:Nuevo, L:Servido, E:Entregado)
+  Modificar listos para servir
+    
+Ventana principal
+=================
+<Cocinero>
+<Mozo>
+
+Ventana Mozo:
+=============
+  Registrar Pedido (Formulario) - Combos con los platos por categoria
+  Listos para servir (Lista) - Boton entregado (Lista por servir(M) y entregados(E))
+
+Ventana Cocinero:
+=================
+  *Registrar Menú de hoy (Nuevo Menú y Lista de menús para modificar)
+  Pedidos (Lista) - Boton servido (Lista de Nuevos(M) y servidos(E)) 
+
+
+
+
+

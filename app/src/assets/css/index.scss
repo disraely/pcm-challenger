@@ -1,0 +1,253 @@
+$ravn-black: #121212;
+
+$text-white: #ffff;
+$text-dark: #333333;
+$text-light: #828282;
+$text-emphasis: #828282;
+
+header {
+    .sectionHeader {
+        background: $ravn-black;
+        padding: 16px 32px 16px 8px;
+        text-align: center;
+        color: $text-white;
+        font-size: 17pt;
+    }
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position:absolute; top:0; bottom:0; right:0; left:0;
+
+  .menu-grilla{
+    padding: 30px 60px;
+    border: 2px solid #000;
+    margin: 10px 0px;
+
+    .grilla-tittle {
+      font-weight: bold;
+      font-size: 25px;
+    }
+  }
+
+  .Cocina{
+    padding: 10px 60px;
+    h1 {
+      text-align: center;
+    }
+  }
+
+  .food-formulario {
+    padding: 20px 60px;
+    border: 2px solid #000;
+
+    label {
+      font-weight: bold;
+      width: 200px;
+    }
+
+    input, select {
+      width: 200px;
+      height: 30px;
+    }
+
+    button {
+      width: 100%;
+      font-weight: bold;
+      color: #121212;
+      padding: 10px;
+      &:hover {
+        background:gray;
+        color: white;
+      }
+    }
+  }
+
+  .Dashboard {
+    margin: 0;
+    width: 100%;
+    vertical-align: middle;
+    align-items: center;
+
+    p {
+      padding:  10px 60px;
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .card {
+      padding: 10px;
+      text-align: center;
+      border: 3px solid #000;
+      margin: 50px 10px;
+
+      .card-title {
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .card-content {
+        margin: 0 auto;
+        width: 100%;
+        padding: 0px;
+        font-size: 15px;
+        font-weight: initial;
+        text-align: left;
+      }
+    }
+
+    .DashButton {
+      padding: 10px;
+      text-align: center;
+      font-size: 20px;
+
+      button {
+        padding: 10px;
+        width: 120px;
+        font-weight: bold;
+        color: #121212;
+        &:hover {
+          background:gray;
+          color: white;
+        }
+
+        .linkDashboard {
+          text-decoration: none;
+          color: black;
+        }
+      }
+    }
+  }
+
+  .contentDashboard {
+    text-decoration:none;
+    .card-body {
+      padding: 16px;
+      p.card-info {
+        font-size: 17pt;
+        background: red;
+        font-weight: bold;
+      }
+      p.card-title {
+        font-size: 14pt;
+        color: rgba(0,0,0,1);
+      }
+      p.card-subtitle {
+        font-size: 14pt;
+        color: rgba(0,0,0,0.5);
+      }
+      .people-detail-row {
+        width: 100%;
+        margin: 0 auto;
+        .people-detail-block-name {
+          text-align: left;
+          width: 50%;
+          display: inline-block;
+          font-size: 17pt;
+          color: rgba(0,0,0,0.3);
+        }
+        .people-detail-block-value {
+          text-align: right;
+          width: 50%;
+          display: inline-block;
+          font-size: 17pt;
+          color: rgba(0,0,0,1);
+          vertical-align: super;
+        }
+      }
+    }
+  }
+  .contentDetail {
+    .backButton {
+      text-decoration: none;
+      padding: 16px;
+      font-weight: bold;
+      color: $text-light;
+      &:hover {
+        color: $text-dark;
+      }
+    }
+    .card-body {
+      padding: 16px;
+      p.card-info {
+        font-size: 14pt;
+        color: $ravn-black;
+        font-weight: bold;
+      }
+      p.card-title {
+        font-size: 14pt;
+        color: rgba(0,0,0,1);
+      }
+      p.card-subtitle {
+        font-size: 14pt;
+        color: rgba(0,0,0,0.5);
+      }
+      .people-detail-row {
+        width: 100%;
+        margin: 0 auto;
+        padding: 16px;
+        .people-detail-block-name {
+          text-align: left;
+          width: 50%;
+          display: inline-block;
+          font-size: 17pt;
+          color: rgba(0,0,0,0.3);
+        }
+        .people-detail-block-value {
+          text-align: right;
+          width: 50%;
+          display: inline-block;
+          font-size: 17pt;
+          color: rgba(0,0,0,1);
+        }
+      }
+    }
+  }
+  p.card-title-failed {
+    padding: 16px;
+    font-size: 17pt;
+    color: rgba(235,87,87,1);
+    text-align: center;
+  }
+  p.card-title-loading {
+    padding: 16px;
+    font-size: 17pt;
+    color: rgba(0,0,0,0.3);
+    text-align: center;
+  }
+}
+
+footer {
+  bottom:0;
+  width:100%;
+  background: $ravn-black;
+  padding: 16px 8px;
+  text-align: right;
+  color: $text-white;
+  font-size: 10pt;
+  margin-top:50px;
+  width:100%;
+  .footer-cop {
+    color: $text-white;
+    font-size: 10pt;
+    padding: 0px;
+    height: 10px;
+  }
+  .footer-author {
+    color: $text-light;
+    font-size: 10pt;
+    padding: 0px;
+    height: 10px;
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
