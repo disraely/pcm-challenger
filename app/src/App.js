@@ -11,7 +11,7 @@ import Mozo from './views/Mozo';
 import Detail from './views/Detail';
 
 const client = new ApolloClient({
-  uri: 'http://localhost:4000/'
+  uri: '/graphiql'
 });
 
 class App extends Component {
